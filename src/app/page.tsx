@@ -6,9 +6,6 @@ export default function Home() {
     <main className="flex min-h-screen bg-gray-100 flex-col items-center">
       <div className="w-full h-full">  
         <div id="home" className="w-auto mx-8 sm:mx-20 h-[95%] pt-20 flex flex-row gap-12 justify-between items-center">
-          {/* <div className="absolute left-[11.5%]">
-            <Image src="/bg.png" width={400} height={400} alt="background" className="object-cover"/>
-          </div> */}
           <div className="hidden lg:flex w-[100%] items-center justify-center object-cover overflow-hidden">
             <Image src="/alvin2.png" width={400} height={400} alt="foto diri" className="z-10"/>
           </div>
