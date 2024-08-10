@@ -12,7 +12,7 @@ export default function Home() {
               <Image src="/alvin2.png" width={400} height={400} alt="foto diri" className="z-10 left-5 object-contain"/>
             </div>
           </div>
-          <div className="lg:mx-12 text-left w-[160%]">
+          <div className="lg:mx-12 text-black text-left w-[160%]">
             <h1 className="font-bold text-[60px] sm:text-[80px]">Hello, I&apos;m <a className="text-purple-400">Alvin</a></h1>
             <h2 className="font-bold sm:-mt-4 text-[40px] sm:text-[60px]">Frontend Web Developer</h2>
             <p className="mt-4">
@@ -70,7 +70,7 @@ export default function Home() {
                       
                       <div className="flex items-center mb-8 w-full">
                         <div className="w-1/2 pr-8 text-right">
-                          <h3 className="text-xl font-semibold"><a href="https://www.itb.ac.id/" className="underline hover:text-purple-400">Institut Teknologi Bandung</a></h3>
+                          <h3 className="text-xl font-semibold"><a href="https://www.itb.ac.id/" className="underline text-black hover:text-purple-400">Institut Teknologi Bandung</a></h3>
                           <p className="mt-2 text-gray-600">S1 Teknik Informatika</p>
                           <p className="mt-2 text-gray-600">2023-Present</p>
                         </div>
@@ -84,7 +84,7 @@ export default function Home() {
                           <div className="absolute right-0 top-1/2 w-6 h-6 bg-purple-400 rounded-full transform translate-x-1/2 -translate-y-1/2"></div>
                         </div>
                         <div className="w-1/2 pl-8 text-left">
-                          <h3 className="text-xl font-semibold"><a href="https://bpkpenabur.or.id/bekasi/smak-penabur-harapan-indah" className="underline hover:text-purple-400">SMAK PENABUR Harapan Indah</a></h3>
+                          <h3 className="text-xl font-semibold"><a href="https://bpkpenabur.or.id/bekasi/smak-penabur-harapan-indah" className="underline text-black hover:text-purple-400">SMAK PENABUR Harapan Indah</a></h3>
                           <p className="mt-2 text-gray-600">Science Major</p>
                           <p className="mt-2 text-gray-600">2020-2023</p>
                         </div>
@@ -92,7 +92,7 @@ export default function Home() {
 
                       <div className="flex items-center mb-8 w-full">
                         <div className="w-1/2 pr-8 text-right">
-                          <h3 className="text-xl font-semibold"><a href="https://bpkpenabur.or.id/bekasi/smpk-penabur-harapan-indah" className="underline hover:text-purple-400">SMPK PENABUR Harapan Indah</a></h3>
+                          <h3 className="text-xl font-semibold"><a href="https://bpkpenabur.or.id/bekasi/smpk-penabur-harapan-indah" className="underline text-black hover:text-purple-400">SMPK PENABUR Harapan Indah</a></h3>
                           <p className="mt-2 text-gray-600">2017-2020</p>
                         </div>
                         <div className="w-1/2 pl-8 relative">
@@ -105,7 +105,7 @@ export default function Home() {
                 
             </div>
         </div>
-        <div id="Skills" className="w-auto mx-8 sm:mx-20 flex flex-col items-center justify-center">
+        <div id="Skills" className="w-auto mx-8 sm:mx-20 flex flex-col items-center justify-center h-full">
           <div className="flex flex-row w-full gap-2">
             <div className="w-full flex flex-col">
               <div className="w-full h-full border-b-2 border-gray-300  flex flex-col"></div>
