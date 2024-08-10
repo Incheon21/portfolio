@@ -7,29 +7,31 @@ export default function Home() {
       <div className="w-full h-full">  
         <div id="home" className="w-auto mx-8 sm:mx-20 h-[95%] pt-20 flex flex-row gap-12 justify-between items-center">
           <div className="hidden lg:flex w-[100%] items-center justify-center object-cover overflow-hidden">
-            <Image src="/alvin2.png" width={400} height={400} alt="foto diri" className="z-10"/>
+            {/* <Image src="/alvin2.png" width={400} height={400} alt="foto diri" className="z-10"/> */}
+            <div className="flex justify-center shadow-[inset_0_-2px_4px_rgba(0,0,0,0.08)] h-[480px] w-[480px] object-cover rounded-full overflow-hidden">
+              <Image src="/alvin2.png" width={400} height={400} alt="foto diri" className="z-10 left-5 object-contain"/>
+            </div>
           </div>
           <div className="lg:mx-12 text-left w-[160%]">
             <h1 className="font-bold text-[60px] sm:text-[80px]">Hello, I&apos;m <a className="text-purple-400">Alvin</a></h1>
             <h2 className="font-bold sm:-mt-4 text-[40px] sm:text-[60px]">Frontend Web Developer</h2>
             <p className="mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pharetra diam vitae augue condimentum scelerisque. 
-              Aenean placerat libero nec tortor posuere, ac blandit neque lobortis. 
+              Currently studying Informatics Engineering major in Bandung Institute of Technology. Highly interested in technolgy and computer field.
             </p>
-            <div className="my-6 flex gap-6">
+            <div className="my-6 flex gap-4">
               <a target="_blank" href="https://github.com/Incheon21">
-              <button className="flex items-center justify-center bg-purple-300 text-white w-[50px] h-[50px] rounded-[36px] hover:scale-[1.05] hover:bg-purple-400 transition-all duration-100">
+              <button className="flex items-center justify-center bg-purple-400 text-white w-[50px] h-[50px] rounded-[36px] hover:scale-[1.05] hover:bg-purple-300 transition-all duration-100">
                 <Image src="/github.png" width={23} height={23} alt="github"/>
               </button>
               </a>
               <a target="_blank" href="https://linkedin.com/in/alvin-christopher-santausa/">
-              <button className="flex items-center justify-center bg-purple-300 text-white w-[50px] h-[50px] rounded-[36px] hover:scale-[1.05] hover:bg-purple-400 transition-all duration-100">
+              <button className="flex items-center justify-center bg-purple-400 text-white w-[50px] h-[50px] rounded-[36px] hover:scale-[1.05] hover:bg-purple-300 transition-all duration-100">
                 <Image src="/linkedin.png" width={30} height={30} alt="linkedin"/>
               </button>
               </a>
               <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=alvinchrisantausa@gmail.com">
-              <button className="flex items-center justify-center bg-purple-300 text-white w-[50px] h-[50px] rounded-[36px] hover:scale-[1.05] hover:bg-purple-400 transition-all duration-100">
-                <Image src="/mail.png" width={23} height={23} alt="mail"/>
+              <button className="flex items-center justify-center bg-purple-400 text-white w-[50px] h-[50px] rounded-[36px] hover:scale-[1.05] hover:bg-purple-300 transition-all duration-100">
+                <Image src="/mail.png" width={20} height={20} alt="mail"/>
               </button>
               </a>
             </div>
