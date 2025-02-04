@@ -55,10 +55,12 @@ export default function Home() {
                     <div id="Experiences" className="w-full text-left">
                       <h1 className="text-black text-left text-[30px] font-semibold underline mb-6">Experiences/Projects</h1>
                       <p className="text-black text-[16px] text-left text-xl">
-                        1. Staff IT <a target="_blank" href="https://www.ieeeitb.com/" className="underline hover:text-purple-400 hover:underline">IEEE ITB Student Branch</a> (2024-2025) <br/>
-                        2. Best Staff IT <a target="_blank" href="https://steik23.netlify.app/" className="underline hover:text-purple-400 hover:underline">BPA (Badan Pengurus Angkatan) STEI-K</a> 2023 <br/>
-                        3. Staff IT <a target="_blank" href="https://sandbox.ieeeitb.com/" className="underline hover:text-purple-400 hover:underline">The Sandbox</a> by IEEE ITB Student Branch (2023) <br/>
-                        4. Koordinator Divisi Web Development <a target="_blank" href="https://excelsiorahi.com/index.php" className="underline hover:text-purple-400 hover:underline">EXCELSIOR</a> SMAK PENABUR Harapan Indah (2021-2022) <br/>
+                        1. Ketua IT <a target="_blank" href="https://sandbox.ieeeitb.com/" className="underline hover:text-purple-400 hover:underline">The Sandbox 2.0</a> by IEEE ITB Student Branch (2024-present) <br/>
+                        2. Ketua IT <a target="_blank" href="https://pemirakmitb.com/" className="underline hover:text-purple-400 hover:underline">PEMIRA KM ITB 2024-2025</a><br/>
+                        3. Staff IT <a target="_blank" href="https://www.ieeeitb.com/" className="underline hover:text-purple-400 hover:underline">IEEE ITB Student Branch</a> (2024-2025) <br/>
+                        4. Best Staff IT <a target="_blank" href="https://steik23.netlify.app/" className="underline hover:text-purple-400 hover:underline">BPA (Badan Pengurus Angkatan) STEI-K</a> 2023 <br/>
+                        5. Staff IT <a target="_blank" href="https://sandbox.ieeeitb.com/" className="underline hover:text-purple-400 hover:underline">The Sandbox</a> by IEEE ITB Student Branch (2023) <br/>
+                        6. Koordinator Divisi Web Development <a target="_blank" href="https://excelsiorahi.com/index.php" className="underline hover:text-purple-400 hover:underline">EXCELSIOR</a> SMAK PENABUR Harapan Indah (2021-2022) <br/>
                       </p>
                     </div>
                   </div>
