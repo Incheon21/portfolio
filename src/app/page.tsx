@@ -1,5 +1,6 @@
 import Cards from "@/components/cards";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -69,9 +70,11 @@ export default function Home() {
                 </button>
               </a>
             </div>
+            <Link href="https://drive.google.com/file/d/1RFmPbJtR3IdfkNz0ljojCIzmDtckNegl/view?usp=sharing" target="_blank">
             <button className="bg-purple-500 hover:bg-purple-600 hover:scale-[1.05] transition-all text-white w-[160px] h-[50px] rounded-[36px]">
               <span className="relative z-10">Resume/CV -&gt;</span>
             </button>
+            </Link>
           </div>
         </div>
         <div
@@ -297,6 +300,11 @@ export default function Home() {
                   alttext="tailwindcss"
                   label="Tailwind CSS"
                 />
+                 <Cards
+                  image="/react-native.png"
+                  alttext="react native"
+                  label="React Native"
+                />
                 <Cards image="/datocms.png" alttext="datocms" label="DatoCMS" />
                 <Cards image="/nodejs.png" alttext="nodejs" label="NodeJS" />
               </div>
@@ -321,6 +329,11 @@ export default function Home() {
                   image="/tailwindcss.png"
                   alttext="tailwindcss"
                   label="Tailwind CSS"
+                />
+                <Cards
+                  image="/react-native.png"
+                  alttext="react native"
+                  label="React Native"
                 />
                 <Cards image="/datocms.png" alttext="datocms" label="DatoCMS" />
                 <Cards image="/nodejs.png" alttext="nodejs" label="NodeJS" />
@@ -353,6 +366,11 @@ export default function Home() {
                   alttext="javascript"
                   label="JavaScript"
                 />
+                 <Cards
+                  image="/react-native.png"
+                  alttext="react native"
+                  label="React Native"
+                />
                 <Cards image="/css.png" alttext="css" label="CSS" />
                 <Cards image="/html.png" alttext="html" label="HTML" />
               </div>
@@ -377,6 +395,11 @@ export default function Home() {
                   image="/javascript.png"
                   alttext="javascript"
                   label="JavaScript"
+                />
+                <Cards
+                  image="/react-native.png"
+                  alttext="react native"
+                  label="React Native"
                 />
                 <Cards image="/css.png" alttext="css" label="CSS" />
                 <Cards image="/html.png" alttext="html" label="HTML" />
