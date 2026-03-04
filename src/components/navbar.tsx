@@ -51,7 +51,7 @@ return (
             <div className={`flex-col shadow-lg sm:shadow-none sm:flex-row sm:flex gap-12 items-center absolute sm:static top-[80px] left-0 right-0 sm:top-0 bg-gray-100 sm:bg-transparent transition-all duration-300 ${isMenuOpen ? "flex pb-6" : "hidden"}`}>
                 <a href="#About" className="hover:scale-[1.05] hover:underline hover:text-purple-400 transition-all duration-0.75">About</a>
                 <a href="#Skills" className="hover:scale-[1.05] hover:underline hover:text-purple-400 transition-all duration-0.75">Skills</a>
-                <a target="_blank" href="https://drive.google.com/file/d/1jRM37hqPG6Ff6ZGA-84hd8E-0U3qEIxz/view?usp=sharing" className="hover:scale-[1.05] hover:underline hover:text-purple-400 transition-all duration-0.75">Resume/CV</a>
+                <a target="_blank" href="https://drive.google.com/file/d/16zWnPu8uC1qktfbRah9892e2nDh4gwrR/view?usp=drive_link" className="hover:scale-[1.05] hover:underline hover:text-purple-400 transition-all duration-0.75">Resume/CV</a>
             </div>
         </div>
     </nav>
