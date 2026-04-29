@@ -1,13 +1,16 @@
-import React from 'react'
+import React from "react";
 
-type Props = {}
+const Footer = () => {
+  return (
+    <footer className="border-t border-[#161513]/10 bg-[#f7f4ee] px-6 py-8 text-[#4c4943] sm:px-10 lg:px-20">
+      <div className="mx-auto flex max-w-7xl flex-col gap-3 text-sm sm:flex-row sm:items-center sm:justify-between">
+        <p className="font-semibold text-[#161513]">
+          Alvin Christopher Santausa
+        </p>
+        <p>Copyright © {new Date().getFullYear()}. Designed and built by Alvin.</p>
+      </div>
+    </footer>
+  );
+};
 
-const Footer:React.FC<Props> = () => {
-return (
-    <div className='w-full h-[60px] bg-purple-400 text-white flex items-center justify-center'>
-        Copyright ©2024; Designed by Alvin
-    </div>
-)
-}
-
-export default Footer
+export default Footer;

@@ -1,413 +1,337 @@
 import Cards from "@/components/cards";
+import {
+  ArrowTopRightOnSquareIcon,
+  CodeBracketIcon,
+  EnvelopeIcon,
+} from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 
+const skills = [
+  { image: "/html.png", alttext: "HTML", label: "HTML" },
+  { image: "/css.png", alttext: "CSS", label: "CSS" },
+  { image: "/javascript.png", alttext: "JavaScript", label: "JavaScript" },
+  { image: "/react.png", alttext: "React", label: "React" },
+  { image: "/nextjs.png", alttext: "Next.js", label: "Next.js" },
+  { image: "/postgresql.png", alttext: "PostgreSQL", label: "PostgreSQL" },
+  { image: "/vite.png", alttext: "Vite", label: "Vite" },
+  { image: "/tailwindcss.png", alttext: "Tailwind CSS", label: "Tailwind CSS" },
+  { image: "/react-native.png", alttext: "React Native", label: "React Native" },
+  { image: "/datocms.png", alttext: "DatoCMS", label: "DatoCMS" },
+  { image: "/nodejs.png", alttext: "Node.js", label: "Node.js" },
+  { image: "/golang.png", alttext: "Golang", label: "Golang" },
+];
+
+const experiences = [
+  {
+    role: "Software Engineer",
+    org: "Freelance",
+    period: "2024-present",
+    href: "https://kodro.cloud/",
+  },
+  {
+    role: "Project Manager",
+    org: "Inkubator IT HMIF ITB",
+    period: "2024-2026",
+    href: "https://www.inkubatorit.id/",
+  },
+  {
+    role: "Head of IT Division",
+    org: "The Sandbox 2.0",
+    period: "2024-2025",
+    href: "https://sandbox.ieeeitb.com/",
+  },
+  {
+    role: "Head of IT Division",
+    org: "PEMIRA KM ITB",
+    period: "2024-2025",
+    href: "https://pemirakmitb.com/",
+  },
+  {
+    role: "IT Staff",
+    org: "IEEE ITB Student Branch",
+    period: "2024-2025",
+    href: "https://www.ieeeitb.com/",
+  },
+  {
+    role: "IT Staff",
+    org: "BPA STEI-K 2023",
+    period: "2023",
+    href: "https://steik23.netlify.app/",
+  },
+  {
+    role: "Web Development Coordinator",
+    org: "EXCELSIOR SMAK PENABUR Harapan Indah",
+    period: "2021-2022",
+    href: "https://excelsiorahi.com/index.php",
+  },
+];
+
+const education = [
+  {
+    school: "Institut Teknologi Bandung",
+    detail: "S1 Teknik Informatika",
+    period: "2023-present",
+    href: "https://www.itb.ac.id/",
+  },
+  {
+    school: "SMAK PENABUR Harapan Indah",
+    detail: "Science Major",
+    period: "2020-2023",
+    href: "https://bpkpenabur.or.id/bekasi/smak-penabur-harapan-indah",
+  },
+  {
+    school: "SMPK PENABUR Harapan Indah",
+    detail: "Junior High School",
+    period: "2017-2020",
+    href: "https://bpkpenabur.or.id/bekasi/smpk-penabur-harapan-indah",
+  },
+];
+
+const socialLinks = [
+  {
+    label: "GitHub",
+    href: "https://github.com/Incheon21",
+    icon: "/github.png",
+    size: 22,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/alvin-christopher-santausa/",
+    icon: "/linkedin.png",
+    size: 25,
+  },
+  {
+    label: "Email",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=alvinchrisantausa@gmail.com",
+    icon: "/mail.png",
+    size: 19,
+  },
+];
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen bg-gray-100 flex-col items-center">
-      <div className="w-full h-full">
-        <div
-          id="home"
-          className="w-auto mx-8 sm:mx-20 h-[95%] pt-[100px] flex flex-row gap-12 justify-between items-center"
-        >
-          <div className="hidden lg:flex w-[100%] items-center justify-center object-cover overflow-hidden animate-fade-in-left rounded-full">
-            {/* <Image src="/alvin2.png" width={400} height={400} alt="foto diri" className="z-10"/> */}
-            <div className="flex justify-center shadow-[inset_0_-2px_4px_rgba(0,0,0,0.08)] h-[480px] w-[480px] object-cover rounded-full overflow-hidden hover:scale-105 transition-all duration-500 ease-out group">
+    <main className="min-h-screen overflow-hidden bg-[#f7f4ee] text-[#161513]">
+      <section
+        id="home"
+        className="relative isolate flex min-h-screen items-center px-6 pb-20 pt-28 sm:px-10 lg:px-20"
+      >
+        <div className="grain-layer" aria-hidden="true" />
+        <div className="mx-auto grid w-full max-w-7xl items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="relative z-10 max-w-3xl animate-fade-in-up">
+            <p className="mb-5 inline-flex rounded-full border border-[#161513]/10 bg-white/60 px-4 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-[#315c50] shadow-sm backdrop-blur">
+              Full-stack developer
+            </p>
+            <h1 className="text-balance text-5xl font-black leading-[0.95] sm:text-7xl lg:text-8xl">
+              Alvin Christopher Santausa
+            </h1>
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-[#4c4943] sm:text-xl">
+              I build fast, thoughtful web experiences with a strong interest in
+              product engineering, frontend systems, and practical technology
+              that people can actually use.
+            </p>
+            <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+              <Link
+                href="https://drive.google.com/file/d/1RFmPbJtR3IdfkNz0ljojCIzmDtckNegl/view?usp=sharing"
+                target="_blank"
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#161513] px-6 text-sm font-bold text-white shadow-lg shadow-black/15 transition hover:-translate-y-0.5 hover:bg-[#315c50] focus:outline-none focus:ring-4 focus:ring-[#315c50]/25"
+              >
+                Resume/CV
+                <ArrowTopRightOnSquareIcon className="h-4 w-4" />
+              </Link>
+              <a
+                href="#Experiences"
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-[#161513]/15 bg-white/70 px-6 text-sm font-bold text-[#161513] shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:border-[#315c50] hover:text-[#315c50] focus:outline-none focus:ring-4 focus:ring-[#315c50]/20"
+              >
+                View work
+                <CodeBracketIcon className="h-4 w-4" />
+              </a>
+            </div>
+            <div className="mt-8 flex gap-3">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={link.label}
+                  className="group flex h-12 w-12 items-center justify-center rounded-full border border-[#161513]/10 bg-white/70 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:border-[#315c50] hover:bg-[#315c50]"
+                >
+                  <Image
+                    src={link.icon}
+                    width={link.size}
+                    height={link.size}
+                    alt=""
+                    className="transition group-hover:brightness-0 group-hover:invert"
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative mx-auto flex w-full max-w-[520px] justify-center lg:justify-end">
+            <div className="hero-orbit" aria-hidden="true" />
+            <div className="relative aspect-[4/5] w-full max-w-[420px] overflow-hidden rounded-[2rem] border border-white/70 bg-[#d7e0d6] shadow-2xl shadow-[#315c50]/20 transition duration-500 hover:-translate-y-2 hover:rotate-1">
               <Image
                 src="/alvin2.png"
-                width={400}
-                height={400}
-                alt="foto diri"
-                className="z-10 left-5 object-contain group-hover:scale-110 transition-transform duration-700 ease-out"
+                alt="Portrait of Alvin Christopher Santausa"
+                fill
+                priority
+                sizes="(min-width: 1024px) 420px, 85vw"
+                className="object-contain object-bottom"
               />
             </div>
-          </div>
-          <div className="lg:mx-12 text-black text-left w-[160%] animate-fade-in-right">
-            <h1 className="font-bold text-[60px] sm:text-[80px] animate-text-slide-up opacity-0 animation-delay-200">
-              Hello, I&apos;m{" "}
-              <span className="text-purple-400 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient">
-                Alvin
-              </span>
-            </h1>
-            <h2 className="font-bold sm:-mt-4 text-[32px] sm:text-[50px] animate-text-slide-up opacity-0 animation-delay-400">
-              Full Stack Web Developer
-            </h2>
-            <p className="mt-4 animate-text-slide-up opacity-0 animation-delay-600">
-              Currently studying Informatics Engineering major in Bandung
-              Institute of Technology. Highly interested in technolgy and
-              computer field.
-            </p>
-            <div className="my-6 flex gap-4 animate-text-slide-up opacity-0 animation-delay-800">
-              <a target="_blank" href="https://github.com/Incheon21">
-                <button className="flex items-center justify-center bg-purple-400 text-white w-[50px] h-[50px] rounded-[36px] hover:scale-110 hover:bg-purple-300 hover:rotate-12 transition-all duration-300 ease-out hover:shadow-lg transform-gpu">
-                  <Image
-                    src="/github.png"
-                    width={23}
-                    height={23}
-                    alt="github"
-                  />
-                </button>
-              </a>
-              <a
-                target="_blank"
-                href="https://linkedin.com/in/alvin-christopher-santausa/"
-              >
-                <button className="flex items-center justify-center bg-purple-400 text-white w-[50px] h-[50px] rounded-[36px] hover:scale-110 hover:bg-purple-300 hover:rotate-12 transition-all duration-300 ease-out hover:shadow-lg transform-gpu">
-                  <Image
-                    src="/linkedin.png"
-                    width={30}
-                    height={30}
-                    alt="linkedin"
-                  />
-                </button>
-              </a>
-              <a
-                target="_blank"
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=alvinchrisantausa@gmail.com"
-              >
-                <button className="flex items-center justify-center bg-purple-400 text-white w-[50px] h-[50px] rounded-[36px] hover:scale-110 hover:bg-purple-300 hover:rotate-12 transition-all duration-300 ease-out hover:shadow-lg transform-gpu">
-                  <Image src="/mail.png" width={20} height={20} alt="mail" />
-                </button>
-              </a>
+            <div className="absolute -bottom-6 left-2 max-w-[230px] rounded-2xl border border-white/70 bg-white/85 p-4 shadow-xl shadow-black/10 backdrop-blur sm:left-10">
+              <p className="text-sm font-bold text-[#315c50]">Currently</p>
+              <p className="mt-1 text-sm leading-6 text-[#4c4943]">
+                Informatics Engineering student at Institut Teknologi Bandung.
+              </p>
             </div>
-            <Link href="https://drive.google.com/file/d/1RFmPbJtR3IdfkNz0ljojCIzmDtckNegl/view?usp=sharing" target="_blank">
-            <button className="bg-purple-500 hover:bg-purple-600 hover:scale-[1.05] transition-all text-white w-[160px] h-[50px] rounded-[36px]">
-              <span className="relative z-10">Resume/CV -&gt;</span>
-            </button>
-            </Link>
           </div>
         </div>
-        <div
-          id="About"
-          className="flex w-auto mx-8 sm:mx-20 bg-gray-100 overflow-x-hidden mb-24"
-        >
-          <div className="mt-24 w-full items-center justify-center">
-            <div className="flex flex-col xl:flex-row justify-between gap-16 my-6">
-              <div className="flex flex-col gap-12 items-center animate-fade-in-up opacity-0 intersection-observer">
+      </section>
+
+      <section id="About" className="px-6 py-20 sm:px-10 lg:px-20">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+          <div className="section-kicker">
+            <span>About</span>
+            <h2>Engineer in training, builder by habit.</h2>
+          </div>
+          <div className="space-y-6 text-lg leading-9 text-[#4c4943]">
+            <p>
+              Alvin is an Informatics Engineering student at the Bandung
+              Institute of Technology with hands-on experience leading web and
+              IT teams in student organizations, committees, and community
+              projects.
+            </p>
+            <p>
+              He focuses on website development across frontend and backend
+              workflows, with a growing interest in product-minded engineering:
+              clear interfaces, reliable systems, and software that feels good
+              to ship.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="Experiences" className="px-6 py-20 sm:px-10 lg:px-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="section-heading">
+            <p>Experience / Projects</p>
+            <h2>Recent roles and web work</h2>
+          </div>
+          <div className="mt-10 grid gap-4 md:grid-cols-2">
+            {experiences.map((item, index) => (
+              <a
+                key={item.org}
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                className="experience-card group"
+                style={{ animationDelay: `${index * 70}ms` }}
+              >
                 <div>
-                  <h1 className="text-black text-left text-[30px] font-semibold underline mb-6  transition-colors duration-300">
-                    About
-                  </h1>
-                  <p className="text-black text-[16px] text-justify text-xl leading-relaxed">
-                    Alvin Christopher Santausa, commonly known as Alvin, is a
-                    student at the Bandung Institute of Technology (ITB) who was
-                    born in Jakarta. Alvin has a strong interest in technology,
-                    particularly in website development. For this reason, he
-                    chose to pursue his studies in the Informatics Engineering{" "}
-                    <a
-                      target="_blank"
-                      href="https://www.itb.ac.id/program-studi-sarjana-informatika"
-                      className="font-semibold text-purple-400 hover:underline hover:text-purple-600 transition-colors duration-300"
-                    >
-                      Informatics Engineering (Teknik Informatika)
-                    </a>{" "}
-                    program at ITB to deepen his knowledge and hone his existing
-                    skills. Alvin has various experiences in organizations and
-                    committees related to website development.
+                  <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#b85c38]">
+                    {item.period}
+                  </p>
+                  <h3 className="mt-3 text-2xl font-black text-[#161513]">
+                    {item.role}
+                  </h3>
+                  <p className="mt-2 text-base leading-7 text-[#4c4943]">
+                    {item.org}
                   </p>
                 </div>
-                <div id="Experiences" className="w-full text-left">
-                  <h1 className="text-black text-left text-[30px] font-semibold underline mb-6 transition-colors duration-300">
-                    Experiences/Projects
-                  </h1>
-                  <div className="text-black text-[16px] text-left text-xl space-y-2">
-                    <p className="hover:translate-x-2 transition-transform duration-300 ease-out">
-                      1. Project Manager at{" "}
-                      <a
-                        target="_blank"
-                        href="https://www.inkubatorit.com/"
-                        className="underline hover:text-purple-400 hover:underline transition-colors duration-300"
-                      >
-                        Inkubator IT HMIF ITB
-                      </a>{" "}
-                      (2024-present)
-                    </p>
-                    <p className="hover:translate-x-2 transition-transform duration-300 ease-out">
-                      2. Head of IT division at{" "}
-                      <a
-                        target="_blank"
-                        href="https://sandbox.ieeeitb.com/"
-                        className="underline hover:text-purple-400 hover:underline transition-colors duration-300"
-                      >
-                        The Sandbox 2.0
-                      </a>{" "}
-                      by IEEE ITB Student Branch (2024-2025)
-                    </p>
-                    <p className="hover:translate-x-2 transition-transform duration-300 ease-out animation-delay-100">
-                      3. Head of IT division at{" "}
-                      <a
-                        target="_blank"
-                        href="https://pemirakmitb.com/"
-                        className="underline hover:text-purple-400 hover:underline transition-colors duration-300"
-                      >
-                        PEMIRA KM ITB 2024-2025
-                      </a>
-                    </p>
-                    <p className="hover:translate-x-2 transition-transform duration-300 ease-out animation-delay-200">
-                      4. IT staff at{" "}
-                      <a
-                        target="_blank"
-                        href="https://www.ieeeitb.com/"
-                        className="underline hover:text-purple-400 hover:underline transition-colors duration-300"
-                      >
-                        IEEE ITB Student Branch
-                      </a>{" "}
-                      (2024-2025)
-                    </p>
-                    <p className="hover:translate-x-2 transition-transform duration-300 ease-out animation-delay-300">
-                      5. IT staff at{" "}
-                      <a
-                        target="_blank"
-                        href="https://steik23.netlify.app/"
-                        className="underline hover:text-purple-400 hover:underline transition-colors duration-300"
-                      >
-                        BPA (Badan Pengurus Angkatan) STEI-K
-                      </a>{" "}
-                      2023
-                    </p>
-                    <p className="hover:translate-x-2 transition-transform duration-300 ease-out animation-delay-400">
-                      6. IT staff at{" "}
-                      <a
-                        target="_blank"
-                        href="https://sandbox.ieeeitb.com/"
-                        className="underline hover:text-purple-400 hover:underline transition-colors duration-300"
-                      >
-                        The Sandbox
-                      </a>{" "}
-                      by IEEE ITB Student Branch (2023)
-                    </p>
-                    <p className="hover:translate-x-2 transition-transform duration-300 ease-out animation-delay-500">
-                      7. Web development coordinator at{" "}
-                      <a
-                        target="_blank"
-                        href="https://excelsiorahi.com/index.php"
-                        className="underline hover:text-purple-400 hover:underline transition-colors duration-300"
-                      >
-                        EXCELSIOR
-                      </a>{" "}
-                      SMAK PENABUR Harapan Indah (2021-2022)
-                    </p>
-                  </div>
-                </div>
-              </div>
-              {/* Education Timeline */}
-              <div className="w-auto xl:w-[240%] flex flex-col xl:items-center justify-center animate-fade-in-up opacity-0 intersection-observer animation-delay-300">
-                <h1 className="text-black text-left text-[30px] font-semibold underline mb-6 transition-colors duration-300">
-                  Education Timeline
-                </h1>
-                <div className="relative flex flex-col items-start justify-center w-full mt-12">
-                  <div className="absolute left-1/2 h-full border-l-2 border-gray-300 transform -translate-x-1/2 animate-grow-line"></div>
+                <ArrowTopRightOnSquareIcon className="h-5 w-5 text-[#315c50] transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                  <div className="flex items-center mb-8 w-full animate-slide-in-right opacity-0 intersection-observer">
-                    <div className="w-1/2 pr-8 text-right">
-                      <h3 className="text-xl font-semibold">
-                        <a
-                          href="https://www.itb.ac.id/"
-                          className="underline text-black hover:text-purple-400 transition-colors duration-300"
-                        >
-                          Institut Teknologi Bandung
-                        </a>
-                      </h3>
-                      <p className="mt-2 text-gray-600">
-                        S1 Teknik Informatika
-                      </p>
-                      <p className="mt-2 text-gray-600">2023-Present</p>
-                    </div>
-                    <div className="w-1/2 pl-8 relative">
-                      <div className="absolute left-0 top-1/2 w-6 h-6 bg-purple-400 rounded-full transform -translate-x-1/2 -translate-y-1/2 hover:scale-125 transition-transform duration-300 animate-pulse-slow"></div>
-                    </div>
-                  </div>
+      <section className="px-6 py-20 sm:px-10 lg:px-20">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="section-kicker">
+            <span>Education</span>
+            <h2>Academic path</h2>
+          </div>
+          <div className="relative space-y-5 border-l border-[#161513]/15 pl-6">
+            {education.map((item) => (
+              <a
+                key={item.school}
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                className="timeline-item group block"
+              >
+                <span className="timeline-dot" />
+                <p className="text-sm font-bold uppercase tracking-[0.16em] text-[#b85c38]">
+                  {item.period}
+                </p>
+                <h3 className="mt-2 text-xl font-black text-[#161513] transition group-hover:text-[#315c50]">
+                  {item.school}
+                </h3>
+                <p className="mt-1 text-[#4c4943]">{item.detail}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                  <div className="flex items-center mb-8 w-full animate-slide-in-left opacity-0 intersection-observer animation-delay-200">
-                    <div className="w-1/2 pr-8 relative">
-                      <div className="absolute right-0 top-1/2 w-6 h-6 bg-purple-400 rounded-full transform translate-x-1/2 -translate-y-1/2 hover:scale-125 transition-transform duration-300 animate-pulse-slow"></div>
-                    </div>
-                    <div className="w-1/2 pl-8 text-left">
-                      <h3 className="text-xl font-semibold">
-                        <a
-                          href="https://bpkpenabur.or.id/bekasi/smak-penabur-harapan-indah"
-                          className="underline text-black hover:text-purple-400 transition-colors duration-300"
-                        >
-                          SMAK PENABUR Harapan Indah
-                        </a>
-                      </h3>
-                      <p className="mt-2 text-gray-600">Science Major</p>
-                      <p className="mt-2 text-gray-600">2020-2023</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center mb-8 w-full animate-slide-in-right opacity-0 intersection-observer animation-delay-400">
-                    <div className="w-1/2 pr-8 text-right">
-                      <h3 className="text-xl font-semibold">
-                        <a
-                          href="https://bpkpenabur.or.id/bekasi/smpk-penabur-harapan-indah"
-                          className="underline text-black hover:text-purple-400 transition-colors duration-300"
-                        >
-                          SMPK PENABUR Harapan Indah
-                        </a>
-                      </h3>
-                      <p className="mt-2 text-gray-600">2017-2020</p>
-                    </div>
-                    <div className="w-1/2 pl-8 relative">
-                      <div className="absolute left-0 top-1/2 w-6 h-6 bg-purple-400 rounded-full transform -translate-x-1/2 -translate-y-1/2 hover:scale-125 transition-transform duration-300 animate-pulse-slow"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <section id="Skills" className="py-20">
+        <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-20">
+          <div className="section-heading">
+            <p>Skills</p>
+            <h2>Tools I use to build</h2>
+          </div>
+        </div>
+        <div className="mt-10 space-y-5">
+          <div className="skill-marquee">
+            <div className="animate-infinite-scroll flex gap-5">
+              {[...skills, ...skills].map((skill, index) => (
+                <Cards key={`${skill.label}-${index}`} {...skill} />
+              ))}
+            </div>
+          </div>
+          <div className="skill-marquee">
+            <div className="animate-infinite-scroll-reverse flex gap-5">
+              {[...skills].reverse().concat([...skills].reverse()).map((skill, index) => (
+                <Cards key={`${skill.label}-reverse-${index}`} {...skill} />
+              ))}
             </div>
           </div>
         </div>
-        <div
-          id="Skills"
-          className="w-full flex flex-col items-center justify-center h-full mb-24"
-        >
-          <div className="flex flex-row w-full gap-2 animate-fade-in-up opacity-0 intersection-observer mx-8 sm:mx-20">
-            <div className="w-full flex flex-col">
-              <div className="w-full h-full border-b-2 border-gray-300 flex flex-col animate-expand-line"></div>
-              <div className="w-full h-full flex flex-col"></div>
-            </div>
-            <h1 className="text-black text-left text-[30px] align-middle font-semibold transition-colors duration-300">
-              Skills
-            </h1>
-            <div className="w-full flex flex-col">
-              <div className="w-full h-full border-b-2 border-gray-300 flex flex-col animate-expand-line animation-delay-300"></div>
-              <div className="w-full h-full flex flex-col"></div>
-            </div>
-          </div>
+      </section>
 
-          {/* Auto-scrolling skills container */}
-          <div className="w-full overflow-hidden mt-12 py-2">
-            <div className="animate-infinite-scroll flex gap-6 whitespace-nowrap">
-              {/* First set of skills */}
-              <div className="flex gap-6 shrink-0">
-                <Cards image="/html.png" alttext="html" label="HTML" />
-                <Cards image="/css.png" alttext="css" label="CSS" />
-                <Cards
-                  image="/javascript.png"
-                  alttext="javascript"
-                  label="JavaScript"
-                />
-                <Cards image="/react.png" alttext="react" label="React" />
-                <Cards image="/nextjs.png" alttext="nextjs" label="Next.js" />
-                <Cards
-                  image="/postgresql.png"
-                  alttext="postgresql"
-                  label="PostgreSQL"
-                />
-                <Cards image="/vite.png" alttext="vite" label="Vite" />
-                <Cards
-                  image="/tailwindcss.png"
-                  alttext="tailwindcss"
-                  label="Tailwind CSS"
-                />
-                 <Cards
-                  image="/react-native.png"
-                  alttext="react native"
-                  label="React Native"
-                />
-                <Cards image="/datocms.png" alttext="datocms" label="DatoCMS" />
-                <Cards image="/nodejs.png" alttext="nodejs" label="NodeJS" />
-              </div>
-              {/* Duplicate set for seamless loop */}
-              <div className="flex gap-6 shrink-0">
-                <Cards image="/html.png" alttext="html" label="HTML" />
-                <Cards image="/css.png" alttext="css" label="CSS" />
-                <Cards
-                  image="/javascript.png"
-                  alttext="javascript"
-                  label="JavaScript"
-                />
-                <Cards image="/react.png" alttext="react" label="React" />
-                <Cards image="/nextjs.png" alttext="nextjs" label="Next.js" />
-                <Cards
-                  image="/postgresql.png"
-                  alttext="postgresql"
-                  label="PostgreSQL"
-                />
-                <Cards image="/vite.png" alttext="vite" label="Vite" />
-                <Cards
-                  image="/tailwindcss.png"
-                  alttext="tailwindcss"
-                  label="Tailwind CSS"
-                />
-                <Cards
-                  image="/react-native.png"
-                  alttext="react native"
-                  label="React Native"
-                />
-                <Cards image="/datocms.png" alttext="datocms" label="DatoCMS" />
-                <Cards image="/nodejs.png" alttext="nodejs" label="NodeJS" />
-              </div>
-            </div>
+      <section id="Contact" className="px-6 py-24 sm:px-10 lg:px-20">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 rounded-[2rem] border border-[#161513]/10 bg-[#161513] p-8 text-white shadow-2xl shadow-black/20 sm:p-12 lg:flex-row lg:items-center">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#d6c6a8]">
+              Contact
+            </p>
+            <h2 className="mt-4 max-w-2xl text-3xl font-black leading-tight sm:text-5xl">
+              Have a project, collaboration, or web idea?
+            </h2>
           </div>
-
-          {/* Second row scrolling in reverse direction */}
-          <div className="w-full overflow-hidden mt-4 py-2">
-            <div className="animate-infinite-scroll-reverse flex gap-6 whitespace-nowrap">
-              {/* First set of skills (reverse order) */}
-              <div className="flex gap-6 shrink-0">
-                <Cards image="/nodejs.png" alttext="nodejs" label="NodeJS" />
-                <Cards image="/datocms.png" alttext="datocms" label="DatoCMS" />
-                <Cards
-                  image="/tailwindcss.png"
-                  alttext="tailwindcss"
-                  label="Tailwind CSS"
-                />
-                <Cards image="/vite.png" alttext="vite" label="Vite" />
-                <Cards
-                  image="/postgresql.png"
-                  alttext="postgresql"
-                  label="PostgreSQL"
-                />
-                <Cards image="/nextjs.png" alttext="nextjs" label="Next.js" />
-                <Cards image="/react.png" alttext="react" label="React" />
-                <Cards
-                  image="/javascript.png"
-                  alttext="javascript"
-                  label="JavaScript"
-                />
-                 <Cards
-                  image="/react-native.png"
-                  alttext="react native"
-                  label="React Native"
-                />
-                <Cards image="/css.png" alttext="css" label="CSS" />
-                <Cards image="/html.png" alttext="html" label="HTML" />
-              </div>
-              {/* Duplicate set for seamless loop */}
-              <div className="flex gap-6 shrink-0">
-                <Cards image="/nodejs.png" alttext="nodejs" label="NodeJS" />
-                <Cards image="/datocms.png" alttext="datocms" label="DatoCMS" />
-                <Cards
-                  image="/tailwindcss.png"
-                  alttext="tailwindcss"
-                  label="Tailwind CSS"
-                />
-                <Cards image="/vite.png" alttext="vite" label="Vite" />
-                <Cards
-                  image="/postgresql.png"
-                  alttext="postgresql"
-                  label="PostgreSQL"
-                />
-                <Cards image="/nextjs.png" alttext="nextjs" label="Next.js" />
-                <Cards image="/react.png" alttext="react" label="React" />
-                <Cards
-                  image="/javascript.png"
-                  alttext="javascript"
-                  label="JavaScript"
-                />
-                <Cards
-                  image="/react-native.png"
-                  alttext="react native"
-                  label="React Native"
-                />
-                <Cards image="/css.png" alttext="css" label="CSS" />
-                <Cards image="/html.png" alttext="html" label="HTML" />
-              </div>
-            </div>
+          <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+            <a
+              href="mailto:alvinchrisantausa@gmail.com"
+              className="inline-flex h-12 shrink-0 items-center justify-center gap-2 rounded-full bg-white px-6 text-sm font-bold text-[#161513] transition hover:-translate-y-0.5 hover:bg-[#d6c6a8] focus:outline-none focus:ring-4 focus:ring-white/25"
+            >
+              Email Alvin
+              <EnvelopeIcon className="h-4 w-4" />
+            </a>
+            <a
+              href="https://kodro.cloud"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex h-12 shrink-0 items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:border-[#d6c6a8] hover:bg-[#d6c6a8] hover:text-[#161513] focus:outline-none focus:ring-4 focus:ring-white/25"
+            >
+              Kodro
+              <ArrowTopRightOnSquareIcon className="h-4 w-4" />
+            </a>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
